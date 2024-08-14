@@ -1,0 +1,27 @@
+INFO - 2024-08-11 14:07:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-08-11 14:07:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$session is deprecated in APPPATH/Controllers/Home.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/run/media/degante/DEV/test/bibliotecaupn24/public/index.php')
+INFO - 2024-08-11 19:46:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-11 19:46:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-11 19:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-08-11 19:46:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$session is deprecated in APPPATH\Controllers\Home.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\test\\bibliotecaupn24\\public\\index.php')
+INFO - 2024-08-11 19:50:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-11 19:50:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-11 19:50:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-11 19:50:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-11 19:55:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-11 19:55:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-11 19:55:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -208,7 +208,7 @@
 
 <header data-bs-theme="light">
 
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #04328C">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #005CAB">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Biblioteca Digital</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"

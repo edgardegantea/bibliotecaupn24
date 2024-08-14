@@ -14,30 +14,40 @@ class Auth extends BaseController
     public function loginProcess()
     {
         $userModel = new UserModel();
-        $usernameOrEmail = $this->request->getVar('username'); // Puede ser username o email
+        $usernameOrEmail = $this->request->getVar('username');
         $password = $this->request->getVar('password');
 
         $user = $userModel
-            ->groupStart() // Iniciar grupo de condiciones OR
+            ->groupStart()
                 ->where('username', $usernameOrEmail)
                 ->orWhere('email', $usernameOrEmail)
-            ->groupEnd() // Finalizar grupo de condiciones OR
+            ->groupEnd()
             ->first();
 
         if ($user && password_verify($password, $user['password'])) {
-            // Credenciales válidas, iniciar sesión
+            
             $sessionData = [
                 'user_id' => $user['id'],
                 'username' => $user['username'],
+                'rol'       => $user['rol'],
                 'name'      => $user['name'],
                 'email'     => $user['email'],
                 'logged_in' => true
             ];
             session()->set($sessionData);
-            return redirect()->to('/dashboard'); // Redireccionar al dashboard
+
+
+            if ($user['rol'] == "admin") {
+                return redirect()->to('/admin');
+            }
+
+            if ($user['rol'] == "usuario") {
+                return redirect()->to('/usuario');
+            }
+
+            
         } else {
-            // Credenciales inválidas
-            return redirect()->back()->withInput()->with('error', 'Invalid username or password');
+            return redirect()->back()->withInput()->with('error', 'Usuario o contraseña incorrecta');
         }
     }
 
@@ -50,11 +60,21 @@ class Auth extends BaseController
 
     public function dashboard()
     {
-        if (!session()->has('logged_in')) {
-            return redirect()->to('/login'); 
+        if (session()->has('logged_in')) {
+
+            if (session()->get('rol') == "admin") {
+                return view('admin/dashboard');
+            }
+
+            if (session()->get('rol') == "usuario") {
+                return view('usuario/dashboard');
+            }
+
+        } else {
+            return redirect()->to('/login');
         }
 
-        return view('auth/dashboard');
+        
     }
 
 
@@ -76,7 +96,7 @@ class Auth extends BaseController
         }
 
         $token = bin2hex(random_bytes(16));
-        $tokenExpires = date('Y-m-d H:i:s', strtotime('+1 hour')); // Expira en 1 hora
+        $tokenExpires = date('Y-m-d H:i:s', strtotime('+1 hour'));
 
         $userModel->update($user['id'], [
             'reset_token' => $token,

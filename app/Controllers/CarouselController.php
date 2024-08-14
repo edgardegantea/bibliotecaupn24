@@ -26,12 +26,12 @@ class CarouselController extends BaseController
         $model = new CarouselModel();
         $data['carouselItems'] = $model->findAll();
 
-        return view('carousel/index', $data); 
+        return view('admin/carousel/index', $data); 
     }
 
     public function create()
     {
-        return view('carousel/create');
+        return view('admin/carousel/create');
     }
 
     public function store()
@@ -58,7 +58,7 @@ class CarouselController extends BaseController
             $model->insert($data);
         }
 
-        return redirect()->to('carousel');
+        return redirect()->to('admin/carousel');
     }
 
 
@@ -67,7 +67,7 @@ class CarouselController extends BaseController
         $model = new CarouselModel();
         $data['image'] = $model->find($id);
 
-        return view('carousel/edit', $data);
+        return view('admin/carousel/edit', $data);
     }
 
     public function update($id = null)
@@ -109,7 +109,7 @@ class CarouselController extends BaseController
             $model->update($id, $data);
         }
 
-        return redirect()->to('carousel');
+        return redirect()->to('admin/carousel');
 
     }
 
@@ -117,25 +117,25 @@ class CarouselController extends BaseController
     public function delete($id)
     {
         if (!$this->request->getMethod() === 'post') {
-            return redirect()->to('/carousel')->with('error', 'Petición inválida.');
+            return redirect()->to('/admin/carousel')->with('error', 'Petición inválida.');
         }
 
         $image = $this->carouselModel->find($id);
 
         if (!$image) {
-            return redirect()->to('/carousel')->with('error', 'Imagen no encontrada.');
+            return redirect()->to('/admin/carousel')->with('error', 'Imagen no encontrada.');
         }
 
         $filePath = FCPATH . 'uploads/' . $image['filename'];
 
         if (file_exists($filePath) && !unlink($filePath)) {
             log_message('error', "Failed to delete image file: {$filePath}");
-            return redirect()->to('/carousel')->with('error', 'Error al tratar de eliminar la imagen.');
+            return redirect()->to('/admin/carousel')->with('error', 'Error al tratar de eliminar la imagen.');
         }
 
         $this->carouselModel->delete(['id' => $id]);
 
-        return redirect()->to('/carousel')->with('success', 'Imagen y publicación eliminadas con éxito');
+        return redirect()->to('/admin/carousel')->with('success', 'Imagen y publicación eliminadas con éxito');
     }
 
 

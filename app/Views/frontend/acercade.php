@@ -33,7 +33,7 @@
     <div class="row align-items-md-stretch mb-5 text-light">
         <div class="col-md-6">
             <div class="h-100 p-5 rounded-3" style="background-color: #04328C;">
-                <h2>Misión</h2>
+                <h2>Misión de</h2>
                 <p>Contribuir a la formación de personas capaces de manejar los recursos de información en diferentes
                     contextos
                     educativos y laborales, proporcionando servicios competitivos y de calidad que contribuyan al

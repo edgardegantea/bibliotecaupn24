@@ -13,7 +13,7 @@ class Editoriales extends ResourceController
     public function index()
     {
         $data['editoriales'] = $this->model->findAll();
-        return view('editoriales/index', $data);
+        return view('admin/editoriales/index', $data);
     }
 
     // Mostrar detalles de una editorial
@@ -21,15 +21,15 @@ class Editoriales extends ResourceController
     {
         $data['editorial'] = $this->model->find($id);
         if (!$data['editorial']) {
-            return redirect()->to('/editoriales')->with('error', 'Editorial no encontrada');
+            return redirect()->to('/admin/editoriales')->with('error', 'Editorial no encontrada');
         }
-        return view('editoriales/show', $data);
+        return view('admin/editoriales/show', $data);
     }
 
     // Mostrar formulario para crear una nueva editorial
     public function new()
     {
-        return view('editoriales/form', ['validation' => \Config\Services::validation()]);
+        return view('admin/editoriales/form', ['validation' => \Config\Services::validation()]);
     }
 
     // Procesar el formulario de creación
@@ -42,7 +42,7 @@ class Editoriales extends ResourceController
         }
 
         $this->model->insert($data);
-        return redirect()->to('/editoriales')->with('success', 'Editorial creada exitosamente');
+        return redirect()->to('/admin/editoriales')->with('success', 'Editorial creada exitosamente');
     }
 
     // Mostrar formulario para editar una editorial
@@ -50,9 +50,9 @@ class Editoriales extends ResourceController
     {
         $data['editorial'] = $this->model->find($id);
         if (!$data['editorial']) {
-            return redirect()->to('/editoriales')->with('error', 'Editorial no encontrada');
+            return redirect()->to('/admin/editoriales')->with('error', 'Editorial no encontrada');
         }
-        return view('editoriales/form', $data); // Reutilizar la misma vista 'form'
+        return view('admin/editoriales/form', $data); // Reutilizar la misma vista 'form'
     }
 
     // Procesar el formulario de edición
@@ -62,7 +62,7 @@ class Editoriales extends ResourceController
 
         // Verificar si la editorial existe
         if (!$this->model->find($id)) {
-            return redirect()->to('/editoriales')->with('error', 'Editorial no encontrada');
+            return redirect()->to('/admin/editoriales')->with('error', 'Editorial no encontrada');
         }
 
         // Reglas de validación para actualizar, permitiendo que el nombre sea el mismo
@@ -74,13 +74,13 @@ class Editoriales extends ResourceController
         }
 
         $this->model->update($id, $data);
-        return redirect()->to('/editoriales')->with('success', 'Editorial actualizada exitosamente');
+        return redirect()->to('/admin/editoriales')->with('success', 'Editorial actualizada exitosamente');
     }
 
     // Eliminar una editorial
     public function delete($id = null)
     {
         $this->model->delete($id);
-        return redirect()->to('/editoriales')->with('success', 'Editorial eliminada exitosamente');
+        return redirect()->to('/admin/editoriales')->with('success', 'Editorial eliminada exitosamente');
     }
 }

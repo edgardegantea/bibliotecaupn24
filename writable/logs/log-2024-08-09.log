@@ -1,0 +1,493 @@
+INFO - 2024-08-09 03:17:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-08-09 03:17:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$session is deprecated in APPPATH/Controllers/Home.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/run/media/degante/DEV/test/bibliotecaupn24/public/index.php')
+ERROR - 2024-08-09 03:17:11 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /run/media/degante/DEV/test/bibliotecaupn24/system/Database/MySQLi/Connection.php:186
+Stack trace:
+#0 /run/media/degante/DEV/test/bibliotecaupn24/system/Database/MySQLi/Connection.php(186): mysqli->real_connect()
+#1 /run/media/degante/DEV/test/bibliotecaupn24/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /run/media/degante/DEV/test/bibliotecaupn24/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /run/media/degante/DEV/test/bibliotecaupn24/system/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query()
+#4 /run/media/degante/DEV/test/bibliotecaupn24/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /run/media/degante/DEV/test/bibliotecaupn24/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /run/media/degante/DEV/test/bibliotecaupn24/app/Controllers/Home.php(24): CodeIgniter\BaseModel->findAll()
+#7 /run/media/degante/DEV/test/bibliotecaupn24/system/CodeIgniter.php(933): App\Controllers\Home->index()
+#8 /run/media/degante/DEV/test/bibliotecaupn24/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 /run/media/degante/DEV/test/bibliotecaupn24/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 /run/media/degante/DEV/test/bibliotecaupn24/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /run/media/degante/DEV/test/bibliotecaupn24/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 /run/media/degante/DEV/test/bibliotecaupn24/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#13 /run/media/degante/DEV/test/bibliotecaupn24/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /run/media/degante/DEV/test/bibliotecaupn24/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /run/media/degante/DEV/test/bibliotecaupn24/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /run/media/degante/DEV/test/bibliotecaupn24/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /run/media/degante/DEV/test/bibliotecaupn24/system/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query()
+#3 /run/media/degante/DEV/test/bibliotecaupn24/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 /run/media/degante/DEV/test/bibliotecaupn24/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /run/media/degante/DEV/test/bibliotecaupn24/app/Controllers/Home.php(24): CodeIgniter\BaseModel->findAll()
+#6 /run/media/degante/DEV/test/bibliotecaupn24/system/CodeIgniter.php(933): App\Controllers\Home->index()
+#7 /run/media/degante/DEV/test/bibliotecaupn24/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /run/media/degante/DEV/test/bibliotecaupn24/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /run/media/degante/DEV/test/bibliotecaupn24/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /run/media/degante/DEV/test/bibliotecaupn24/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /run/media/degante/DEV/test/bibliotecaupn24/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#12 /run/media/degante/DEV/test/bibliotecaupn24/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-08-09 03:17:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/Home.php(24): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/run/media/degante/DEV/test/bibliotecaupn24/public/index.php')
+INFO - 2024-08-09 03:17:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-08-09 03:17:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$session is deprecated in APPPATH/Controllers/Home.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/run/media/degante/DEV/test/bibliotecaupn24/public/index.php')
+INFO - 2024-08-09 03:18:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-08-09 03:18:07 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$session is deprecated in APPPATH/Controllers/Home.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/run/media/degante/DEV/test/bibliotecaupn24/public/index.php')
+INFO - 2024-08-09 03:18:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-08-09 03:18:09 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$session is deprecated in APPPATH/Controllers/Home.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/run/media/degante/DEV/test/bibliotecaupn24/public/index.php')
+INFO - 2024-08-09 04:04:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-08-09 04:04:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$session is deprecated in APPPATH/Controllers/Home.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/run/media/degante/DEV/test/bibliotecaupn24/public/index.php')
+ERROR - 2024-08-09 04:04:24 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'bibliotecaupn212' in /run/media/degante/DEV/test/bibliotecaupn24/system/Database/MySQLi/Connection.php:186
+Stack trace:
+#0 /run/media/degante/DEV/test/bibliotecaupn24/system/Database/MySQLi/Connection.php(186): mysqli->real_connect()
+#1 /run/media/degante/DEV/test/bibliotecaupn24/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /run/media/degante/DEV/test/bibliotecaupn24/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /run/media/degante/DEV/test/bibliotecaupn24/system/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query()
+#4 /run/media/degante/DEV/test/bibliotecaupn24/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /run/media/degante/DEV/test/bibliotecaupn24/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /run/media/degante/DEV/test/bibliotecaupn24/app/Controllers/Home.php(24): CodeIgniter\BaseModel->findAll()
+#7 /run/media/degante/DEV/test/bibliotecaupn24/system/CodeIgniter.php(933): App\Controllers\Home->index()
+#8 /run/media/degante/DEV/test/bibliotecaupn24/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 /run/media/degante/DEV/test/bibliotecaupn24/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 /run/media/degante/DEV/test/bibliotecaupn24/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /run/media/degante/DEV/test/bibliotecaupn24/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 /run/media/degante/DEV/test/bibliotecaupn24/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#13 /run/media/degante/DEV/test/bibliotecaupn24/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'bibliotecaupn212' in /run/media/degante/DEV/test/bibliotecaupn24/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /run/media/degante/DEV/test/bibliotecaupn24/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /run/media/degante/DEV/test/bibliotecaupn24/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /run/media/degante/DEV/test/bibliotecaupn24/system/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query()
+#3 /run/media/degante/DEV/test/bibliotecaupn24/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 /run/media/degante/DEV/test/bibliotecaupn24/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /run/media/degante/DEV/test/bibliotecaupn24/app/Controllers/Home.php(24): CodeIgniter\BaseModel->findAll()
+#6 /run/media/degante/DEV/test/bibliotecaupn24/system/CodeIgniter.php(933): App\Controllers\Home->index()
+#7 /run/media/degante/DEV/test/bibliotecaupn24/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /run/media/degante/DEV/test/bibliotecaupn24/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /run/media/degante/DEV/test/bibliotecaupn24/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /run/media/degante/DEV/test/bibliotecaupn24/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /run/media/degante/DEV/test/bibliotecaupn24/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#12 /run/media/degante/DEV/test/bibliotecaupn24/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-08-09 04:04:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'bibliotecaupn212'
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/Home.php(24): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/run/media/degante/DEV/test/bibliotecaupn24/public/index.php')
+INFO - 2024-08-09 04:04:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-08-09 04:04:38 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$session is deprecated in APPPATH/Controllers/Home.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/run/media/degante/DEV/test/bibliotecaupn24/public/index.php')
+ERROR - 2024-08-09 04:04:38 --> mysqli_sql_exception: Table 'bibliotecaupn24.carousel' doesn't exist in /run/media/degante/DEV/test/bibliotecaupn24/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /run/media/degante/DEV/test/bibliotecaupn24/system/Database/MySQLi/Connection.php(312): mysqli->query()
+#1 /run/media/degante/DEV/test/bibliotecaupn24/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /run/media/degante/DEV/test/bibliotecaupn24/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /run/media/degante/DEV/test/bibliotecaupn24/system/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query()
+#4 /run/media/degante/DEV/test/bibliotecaupn24/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /run/media/degante/DEV/test/bibliotecaupn24/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /run/media/degante/DEV/test/bibliotecaupn24/app/Controllers/Home.php(24): CodeIgniter\BaseModel->findAll()
+#7 /run/media/degante/DEV/test/bibliotecaupn24/system/CodeIgniter.php(933): App\Controllers\Home->index()
+#8 /run/media/degante/DEV/test/bibliotecaupn24/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 /run/media/degante/DEV/test/bibliotecaupn24/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 /run/media/degante/DEV/test/bibliotecaupn24/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /run/media/degante/DEV/test/bibliotecaupn24/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 /run/media/degante/DEV/test/bibliotecaupn24/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#13 /run/media/degante/DEV/test/bibliotecaupn24/system/rewrite.php(44): require_once('...')
+#14 {main}
+CRITICAL - 2024-08-09 04:04:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'bibliotecaupn24.carousel' doesn't exist
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 4 APPPATH/Controllers/Home.php(24): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH/rewrite.php(44): require_once('/run/media/degante/DEV/test/bibliotecaupn24/public/index.php')
+CRITICAL - 2024-08-09 04:04:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'bibliotecaupn24.carousel' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 317.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 6 APPPATH/Controllers/Home.php(24): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/run/media/degante/DEV/test/bibliotecaupn24/public/index.php')
+CRITICAL - 2024-08-09 04:04:38 --> [Caused by] mysqli_sql_exception: Table 'bibliotecaupn24.carousel' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 312.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(312): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 7 APPPATH/Controllers/Home.php(24): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH/rewrite.php(44): require_once('/run/media/degante/DEV/test/bibliotecaupn24/public/index.php')
+INFO - 2024-08-09 04:09:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-08-09 04:09:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$session is deprecated in APPPATH/Controllers/Home.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/run/media/degante/DEV/test/bibliotecaupn24/public/index.php')
+ERROR - 2024-08-09 04:09:40 --> mysqli_sql_exception: Table 'bibliotecaupn24.carousel' doesn't exist in /run/media/degante/DEV/test/bibliotecaupn24/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /run/media/degante/DEV/test/bibliotecaupn24/system/Database/MySQLi/Connection.php(312): mysqli->query()
+#1 /run/media/degante/DEV/test/bibliotecaupn24/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /run/media/degante/DEV/test/bibliotecaupn24/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /run/media/degante/DEV/test/bibliotecaupn24/system/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query()
+#4 /run/media/degante/DEV/test/bibliotecaupn24/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /run/media/degante/DEV/test/bibliotecaupn24/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /run/media/degante/DEV/test/bibliotecaupn24/app/Controllers/Home.php(24): CodeIgniter\BaseModel->findAll()
+#7 /run/media/degante/DEV/test/bibliotecaupn24/system/CodeIgniter.php(933): App\Controllers\Home->index()
+#8 /run/media/degante/DEV/test/bibliotecaupn24/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 /run/media/degante/DEV/test/bibliotecaupn24/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 /run/media/degante/DEV/test/bibliotecaupn24/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /run/media/degante/DEV/test/bibliotecaupn24/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 /run/media/degante/DEV/test/bibliotecaupn24/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#13 /run/media/degante/DEV/test/bibliotecaupn24/system/rewrite.php(44): require_once('...')
+#14 {main}
+CRITICAL - 2024-08-09 04:09:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'bibliotecaupn24.carousel' doesn't exist
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 4 APPPATH/Controllers/Home.php(24): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH/rewrite.php(44): require_once('/run/media/degante/DEV/test/bibliotecaupn24/public/index.php')
+CRITICAL - 2024-08-09 04:09:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'bibliotecaupn24.carousel' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 317.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 6 APPPATH/Controllers/Home.php(24): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/run/media/degante/DEV/test/bibliotecaupn24/public/index.php')
+CRITICAL - 2024-08-09 04:09:40 --> [Caused by] mysqli_sql_exception: Table 'bibliotecaupn24.carousel' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 312.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(312): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 7 APPPATH/Controllers/Home.php(24): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH/rewrite.php(44): require_once('/run/media/degante/DEV/test/bibliotecaupn24/public/index.php')
+INFO - 2024-08-09 04:09:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-08-09 04:09:52 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$session is deprecated in APPPATH/Controllers/Home.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/run/media/degante/DEV/test/bibliotecaupn24/public/index.php')
+INFO - 2024-08-09 04:10:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-08-09 04:10:07 --> [DEPRECATED] Creation of dynamic property App\Controllers\CarouselController::$session is deprecated in APPPATH/Controllers/CarouselController.php on line 20.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\CarouselController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/run/media/degante/DEV/test/bibliotecaupn24/public/index.php')
+INFO - 2024-08-09 04:10:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:10:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:10:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:10:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:10:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:10:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:16:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:16:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:17:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:17:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:17:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:17:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:18:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:18:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:20:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:20:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:22:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:24:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:26:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:26:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:29:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:29:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:29:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:29:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:29:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:29:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:29:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:29:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:30:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:30:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:30:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 04:30:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 14:14:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-08-09 14:14:34 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$session is deprecated in APPPATH/Controllers/Home.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/run/media/degante/DEV/test/bibliotecaupn24/public/index.php')
+ERROR - 2024-08-09 14:14:34 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /run/media/degante/DEV/test/bibliotecaupn24/system/Database/MySQLi/Connection.php:186
+Stack trace:
+#0 /run/media/degante/DEV/test/bibliotecaupn24/system/Database/MySQLi/Connection.php(186): mysqli->real_connect()
+#1 /run/media/degante/DEV/test/bibliotecaupn24/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /run/media/degante/DEV/test/bibliotecaupn24/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 /run/media/degante/DEV/test/bibliotecaupn24/system/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query()
+#4 /run/media/degante/DEV/test/bibliotecaupn24/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /run/media/degante/DEV/test/bibliotecaupn24/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 /run/media/degante/DEV/test/bibliotecaupn24/app/Controllers/Home.php(24): CodeIgniter\BaseModel->findAll()
+#7 /run/media/degante/DEV/test/bibliotecaupn24/system/CodeIgniter.php(933): App\Controllers\Home->index()
+#8 /run/media/degante/DEV/test/bibliotecaupn24/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 /run/media/degante/DEV/test/bibliotecaupn24/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 /run/media/degante/DEV/test/bibliotecaupn24/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /run/media/degante/DEV/test/bibliotecaupn24/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 /run/media/degante/DEV/test/bibliotecaupn24/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#13 /run/media/degante/DEV/test/bibliotecaupn24/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /run/media/degante/DEV/test/bibliotecaupn24/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /run/media/degante/DEV/test/bibliotecaupn24/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /run/media/degante/DEV/test/bibliotecaupn24/system/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 /run/media/degante/DEV/test/bibliotecaupn24/system/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query()
+#3 /run/media/degante/DEV/test/bibliotecaupn24/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 /run/media/degante/DEV/test/bibliotecaupn24/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 /run/media/degante/DEV/test/bibliotecaupn24/app/Controllers/Home.php(24): CodeIgniter\BaseModel->findAll()
+#6 /run/media/degante/DEV/test/bibliotecaupn24/system/CodeIgniter.php(933): App\Controllers\Home->index()
+#7 /run/media/degante/DEV/test/bibliotecaupn24/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /run/media/degante/DEV/test/bibliotecaupn24/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /run/media/degante/DEV/test/bibliotecaupn24/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /run/media/degante/DEV/test/bibliotecaupn24/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /run/media/degante/DEV/test/bibliotecaupn24/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#12 /run/media/degante/DEV/test/bibliotecaupn24/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-08-09 14:14:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/Home.php(24): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/run/media/degante/DEV/test/bibliotecaupn24/public/index.php')
+INFO - 2024-08-09 14:29:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-08-09 14:29:29 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$session is deprecated in APPPATH/Controllers/Home.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/run/media/degante/DEV/test/bibliotecaupn24/public/index.php')
+INFO - 2024-08-09 14:45:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 14:45:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 14:45:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 14:45:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 14:45:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 14:45:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 14:46:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 14:46:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 14:46:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 14:46:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 14:46:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 14:46:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 14:46:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 14:47:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 14:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 14:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 14:47:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 14:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 14:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 14:47:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 14:47:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 14:47:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 14:47:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 15:08:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 15:09:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 15:09:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 15:09:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 15:09:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 15:09:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 15:10:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 15:10:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 15:10:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 15:10:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 15:14:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 15:14:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 15:14:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 15:14:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 15:14:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 15:17:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-08-09 15:17:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$session is deprecated in APPPATH/Controllers/Home.php on line 16.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/run/media/degante/DEV/test/bibliotecaupn24/public/index.php')
+INFO - 2024-08-09 15:38:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 15:38:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 15:38:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 15:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 15:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 18:39:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 18:39:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 18:39:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 18:39:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 18:39:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 18:39:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 18:39:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 18:39:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 18:39:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 20:28:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 20:28:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 20:28:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 20:28:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 20:28:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 20:31:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 20:31:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 20:31:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 20:31:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 20:31:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 20:36:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 20:36:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-09 20:36:38 --> ErrorException: Attempt to read property "autores" on array
+[Method: GET, Route: recursos]
+in APPPATH/Controllers/Recursos.php on line 40.
+ 1 APPPATH/Controllers/Recursos.php(40): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Recursos->index()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/run/media/degante/DEV/test/bibliotecaupn24/public/index.php')
+INFO - 2024-08-09 20:36:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 20:36:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 20:36:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-09 20:36:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

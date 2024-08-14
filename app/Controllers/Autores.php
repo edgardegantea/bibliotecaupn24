@@ -14,7 +14,7 @@ class Autores extends ResourceController
     public function index()
     {
         $data['autores'] = $this->model->findAll();
-        return view('autores/index', $data);
+        return view('admin/autores/index', $data);
     }
 
 
@@ -25,14 +25,14 @@ class Autores extends ResourceController
         if (!$data['autor']) {
             return redirect()->to('/autores')->with('error', 'Autor no encontrado');
         }
-        return view('autores/show', $data);
+        return view('admin/autores/show', $data);
     }
 
 
 
     public function new()
     {
-        return view('autores/form');
+        return view('admin/autores/form');
     }
 
 
@@ -53,7 +53,7 @@ class Autores extends ResourceController
 
             $this->model->insert($data);
 
-            return redirect()->to('/autores')->with('success', 'Autor creado exitosamente');
+            return redirect()->to('/admin/autores')->with('success', 'Autor creado exitosamente');
         } else {
             return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
         }
@@ -65,9 +65,9 @@ class Autores extends ResourceController
     {
         $data['autor'] = $this->model->find($id);
         if (!$data['autor']) {
-            return redirect()->to('/autores')->with('error', 'Autor no encontrado');
+            return redirect()->to('/admin/autores')->with('error', 'Autor no encontrado');
         }
-        return view('autores/form', $data);
+        return view('admin/autores/form', $data);
     }
 
 
@@ -97,7 +97,7 @@ class Autores extends ResourceController
 
         $this->model->update($id, $data);
 
-        return redirect()->to('/autores')->with('success', 'Autor actualizado exitosamente');
+        return redirect()->to('/admin/autores')->with('success', 'Autor actualizado exitosamente');
     }
 
 
@@ -106,7 +106,7 @@ class Autores extends ResourceController
     {
         $autor = $this->model->find($id);
         if ($autor === null) {
-            return redirect()->to('/autores')->with('error', 'Autor no encontrado');
+            return redirect()->to('/admin/autores')->with('error', 'Autor no encontrado');
         }
 
         if ($autor['foto']) {
@@ -114,6 +114,6 @@ class Autores extends ResourceController
         }
         $this->model->delete($id);
 
-        return redirect()->to('/autores')->with('success', 'Autor eliminado exitosamente');
+        return redirect()->to('/admin/autores')->with('success', 'Autor eliminado exitosamente');
     }
 }

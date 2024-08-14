@@ -15,35 +15,42 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?= base_url('users'); ?>" class="nav-link">
+                            <a href="<?= base_url('admin/users'); ?>" class="nav-link">
                                 <i class="nav-icon bi bi-circle"></i>
                                 <p>Usuarios</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="<?= base_url('recursos'); ?>" class="nav-link">
+                            <a href="<?= base_url('admin/recursos'); ?>" class="nav-link">
                                 <i class="nav-icon bi bi-circle"></i>
                                 <p>Recursos bibliográficos</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="<?= base_url('autores'); ?>" class="nav-link">
+                            <a href="<?= base_url('admin/archivos'); ?>" class="nav-link">
+                                <i class="nav-icon bi bi-circle"></i>
+                                <p>Recursos digitales</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="<?= base_url('admin/autores'); ?>" class="nav-link">
                                 <i class="nav-icon bi bi-circle"></i>
                                 <p>Autores</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="<?= base_url('editoriales'); ?>" class="nav-link">
+                            <a href="<?= base_url('admin/editoriales'); ?>" class="nav-link">
                                 <i class="nav-icon bi bi-circle"></i>
                                 <p>Editoriales</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="<?= base_url('generos'); ?>" class="nav-link">
+                            <a href="<?= base_url('admin/generos'); ?>" class="nav-link">
                                 <i class="nav-icon bi bi-circle"></i>
                                 <p>Géneros</p>
                             </a>
@@ -81,7 +88,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?php echo base_url('carousel'); ?>" class="nav-link">
+                            <a href="<?php echo base_url('admin/carousel'); ?>" class="nav-link">
                                 <i class="nav-icon bi bi-circle"></i>
                                 <p>Publicaciones</p>
                             </a>
