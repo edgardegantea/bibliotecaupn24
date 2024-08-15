@@ -2,10 +2,19 @@
 
 <?= $this->section('content') ?>
 
-<div class="container mt-4">
-    <h1>Lista de Recursos</h1>
+<div class="mt-3">
 
-    <a href="/recursos/new" class="btn btn-primary mb-3">Crear Nuevo Recurso</a>
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Recursos bibliográficos</h2>
+        </div>
+        <div class="col-md-4">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <a href="<?= base_url('admin/recursos/new'); ?>" class="btn btn-primary">Subir recurso bibliográfico</a>
+            </div>
+        </div>
+
+    </div>
 
     <?php if (session()->has('success')): ?>
         <div class="alert alert-success">
@@ -32,7 +41,7 @@
                 <th>Editorial</th>
                 <th>Edición</th>
                 <th>Autores</th>
-                <th>Archivo</th> 
+                <th>Archivo</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -42,27 +51,27 @@
                     <td><?= $recurso['id'] ?></td>
                     <td><?= $recurso['titulo'] ?></td>
                     <td><?= $recurso['subtitulo'] ?></td>
-                    <td><?= $recurso['genero_nombre'] ?></td> 
+                    <td><?= $recurso['genero_nombre'] ?></td>
                     <td><?= $recurso['isbn'] ?></td>
                     <td><?= $recurso['anio_publicacion'] ?></td>
                     <td><?= $recurso['idioma'] ?></td>
                     <td><?= $recurso['editorial_nombre'] ?></td>
                     <td><?= $recurso['edicion'] ?></td>
                     <td>
-                        <?php 
-                            $autores = $recurso['autores']; 
-                            if (!empty($autores)) {
-                                $nombresAutores = array_column($autores, 'nombre');
-                                echo implode(", ", $nombresAutores); 
-                            } else {
-                                echo "Sin autores"; 
-                            }
+                        <?php
+                        $autores = $recurso['autores'];
+                        if (!empty($autores)) {
+                            $nombresAutores = array_column($autores, 'nombre');
+                            echo implode(", ", $nombresAutores);
+                        } else {
+                            echo "Sin autores";
+                        }
                         ?>
                     </td>
-                    <td> 
+                    <td>
                         <?php if ($recurso['archivo']): ?>
                             <a href="/uploads/<?= $recurso['archivo'] ?>" target="_blank">
-                                <?= $recurso['archivo'] ?> 
+                                <?= $recurso['archivo'] ?>
                             </a>
                         <?php else: ?>
                             Sin archivo
