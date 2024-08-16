@@ -13,7 +13,6 @@
                 <a href="<?= base_url('admin/recursos/new'); ?>" class="btn btn-primary">Subir recurso bibliográfico</a>
             </div>
         </div>
-
     </div>
 
     <?php if (session()->has('success')): ?>

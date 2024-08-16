@@ -19,6 +19,10 @@ $routes->group('', ['namespace' => 'App\Controllers'], function ($routes) {
     $routes->post('reset-password', 'Auth::processResetPassword');
 });
 
+$routes->get('reglamento', 'Home::reglamento');
+$routes->get('servicios', 'Home::servicios');
+$routes->get('acercade', 'Home::acercade');
+
 
 
 $routes->group('admin', ['filter' => 'auth'], function ($routes) {
@@ -40,9 +44,7 @@ $routes->group('admin', ['filter' => 'auth'], function ($routes) {
     $routes->put('carousel/update/(:num)', 'CarouselController::update/$1');
     $routes->get('carousel/delete/(:num)', 'CarouselController::delete/$1');
 
-    $routes->get('reglamento', 'Home::reglamento');
-    $routes->get('servicios', 'Home::servicios');
-    $routes->get('acercade', 'Home::acercade');
+
 
 
     $routes->get('/descarga/(:num)', 'ArchivoController::descargar/$1');

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 11, 2024 at 10:26 PM
+-- Generation Time: Aug 15, 2024 at 08:09 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,6 +20,36 @@ SET time_zone = "+00:00";
 --
 -- Database: `bibliotecaupn24`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `archivos`
+--
+
+CREATE TABLE `archivos` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(255) NOT NULL,
+  `ruta` varchar(255) NOT NULL,
+  `clasificacion_id` int(11) DEFAULT NULL,
+  `peso` int(11) NOT NULL,
+  `tipo` varchar(255) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `archivos`
+--
+
+INSERT INTO `archivos` (`id`, `nombre`, `ruta`, `clasificacion_id`, `peso`, `tipo`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Academia X - Guía Bash (v1.0.0).pdf', 'uploads/recursosDigitales/1723674287_9f04ac56fee4bc68bd8b.pdf', 1, 2502016, 'application/pdf', '2024-08-15 04:24:47', '2024-08-15 04:24:47', NULL),
+(2, 'Academia X - Guía C (v1.0.0).pdf', 'uploads/recursosDigitales/1723674287_c869fad1f43b2e6847e1.pdf', 1, 2996774, 'application/pdf', '2024-08-15 04:24:47', '2024-08-15 04:24:47', NULL),
+(3, 'Academia X - Guía Java (v1.0.0).pdf', 'uploads/recursosDigitales/1723674287_164bb736b36446180021.pdf', 1, 3982155, 'application/pdf', '2024-08-15 04:24:47', '2024-08-15 04:24:47', NULL),
+(4, 'Academia X - Guía PHP (v1.0.0).pdf', 'uploads/recursosDigitales/1723674287_2cddca3afcc652d7eb9f.pdf', 1, 2926105, 'application/pdf', '2024-08-15 04:24:47', '2024-08-15 04:24:47', NULL),
+(5, 'Academia X - Guía TypeScript (v1.0.0).pdf', 'uploads/recursosDigitales/1723674287_f537f0fcd5397d0bca98.pdf', 1, 3056494, 'application/pdf', '2024-08-15 04:24:47', '2024-08-15 04:24:47', NULL),
+(6, 'Academia X Guia C#v1.0.0.pdf', 'uploads/recursosDigitales/1723674287_daea2102e75fe917f1ca.pdf', 1, 3002415, 'application/pdf', '2024-08-15 04:24:47', '2024-08-15 04:24:47', NULL);
 
 -- --------------------------------------------------------
 
@@ -91,6 +121,27 @@ CREATE TABLE `categorias` (
   `updated_at` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `clasificaciones`
+--
+
+CREATE TABLE `clasificaciones` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(255) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `clasificaciones`
+--
+
+INSERT INTO `clasificaciones` (`id`, `nombre`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Psicología', '2024-08-15 04:24:27', '2024-08-15 04:24:27', NULL);
 
 -- --------------------------------------------------------
 
@@ -331,6 +382,7 @@ CREATE TABLE `ubicaciones` (
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
+  `rol` varchar(20) NOT NULL,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `username` varchar(30) NOT NULL,
@@ -347,8 +399,8 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `username`, `password`, `reset_token`, `reset_token_expires`, `active`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Edgar Degante Aguilar', 'edgar.degante.a@gmail.com', 'admin', '$2y$10$qWNc46aHhFOz9/gGp919P.Hxjn1qXXFSmF70P3relMTI5ESIOKyB.', 'b5088c1cc44ed53cab631651a003630c', '2024-07-26 21:05:37', 1, '2024-07-26 16:52:52', '2024-07-26 20:05:37', NULL);
+INSERT INTO `users` (`id`, `rol`, `name`, `email`, `username`, `password`, `reset_token`, `reset_token_expires`, `active`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'admin', 'Edgar Degante Aguilar', 'edgar.degante.a@gmail.com', 'admin', '$2y$10$qWNc46aHhFOz9/gGp919P.Hxjn1qXXFSmF70P3relMTI5ESIOKyB.', 'b5088c1cc44ed53cab631651a003630c', '2024-07-26 21:05:37', 1, '2024-07-26 16:52:52', '2024-08-14 22:07:50', NULL);
 
 -- --------------------------------------------------------
 
@@ -367,6 +419,13 @@ CREATE TABLE `user_roles` (
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `archivos`
+--
+ALTER TABLE `archivos`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `clasificacion_id` (`clasificacion_id`);
 
 --
 -- Indexes for table `autores`
@@ -391,6 +450,12 @@ ALTER TABLE `carousel`
 -- Indexes for table `categorias`
 --
 ALTER TABLE `categorias`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `clasificaciones`
+--
+ALTER TABLE `clasificaciones`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -499,6 +564,12 @@ ALTER TABLE `user_roles`
 --
 
 --
+-- AUTO_INCREMENT for table `archivos`
+--
+ALTER TABLE `archivos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `autores`
 --
 ALTER TABLE `autores`
@@ -509,6 +580,12 @@ ALTER TABLE `autores`
 --
 ALTER TABLE `categorias`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `clasificaciones`
+--
+ALTER TABLE `clasificaciones`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `editoriales`
@@ -585,6 +662,12 @@ ALTER TABLE `users`
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `archivos`
+--
+ALTER TABLE `archivos`
+  ADD CONSTRAINT `archivos_ibfk_1` FOREIGN KEY (`clasificacion_id`) REFERENCES `clasificaciones` (`id`);
 
 --
 -- Constraints for table `autores_recursos`
